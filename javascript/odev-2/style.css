@@ -14,7 +14,7 @@ body {
 
 .header {
   background-color: #fbb224;
-  width: 70rem;
+  width: 50%;
   margin: 0 auto;
   margin-top: 10rem;
 }
@@ -45,14 +45,13 @@ h1 {
   padding: 1.2rem;
   border: none;
   cursor: pointer;
-  border: 2px solid transparent;
+  background: #dd9f22;
 }
 #todo-btn:hover {
   background-color: #fbb224;
-  border: 2px solid #333;
 }
 #todo-list {
-  width: 70rem;
+  width: 50%;
   margin: 0.5rem auto;
 }
 
@@ -85,4 +84,13 @@ h1 {
 }
 .todo-check-mark {
   margin-right: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .header {
+    width: 95%;
+  }
+  #todo-list {
+    width: 95%;
+  }
 }
