@@ -14,15 +14,15 @@ export default function TodoItem({ listItem, setTodoList, todoList }) {
       setTodoStyle("");
     } else {
       modifiedlist[modifiedItem].isCompleted = true;
-      setTodoStyle(" item--completed");
+      setTodoStyle("item--completed");
     }
 
     setTodoList([...modifiedlist]);
   };
 
   return (
-    <li className={`list__item${todoStyle}`} key={listItem.id} id={listItem.id}>
-      {listItem.todoName}
+    <li className={`list__item`} key={listItem.id} id={listItem.id}>
+      <span className={`${todoStyle}`}>{listItem.todoName}</span>
       <button
         className="item__clear-button"
         onClick={() => {
@@ -32,9 +32,9 @@ export default function TodoItem({ listItem, setTodoList, todoList }) {
         Clear
       </button>
       <button
-        className="item__clear-button"
+        className={`item__complete-button`}
         onClick={() => {
-          completeTodo({ ...listItem, isComleted: true });
+          completeTodo({ ...listItem });
         }}
       >
         Complete

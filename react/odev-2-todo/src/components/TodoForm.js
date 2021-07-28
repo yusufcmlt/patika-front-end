@@ -22,9 +22,8 @@ export default function TodoForm({ setTodoList }) {
 
   const handleTodoChange = (event) => {
     const { value, name } = event.target;
-    if (value.trim()) {
-      setTodoItem((prevState) => ({ ...prevState, [name]: value }));
-    }
+
+    setTodoItem((prevState) => ({ ...prevState, [name]: value }));
   };
   return (
     <form className="todo__form" onSubmit={handleTodoSubmit}>
