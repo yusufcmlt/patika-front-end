@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function TodoFilter() {
-  return <div></div>;
+  return <div className="todo__filter">FILTER HERE</div>;
 }
